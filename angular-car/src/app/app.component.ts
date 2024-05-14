@@ -19,6 +19,12 @@ export class AppComponent {
   obtenerTodosLosDatos(){
     this.dataService.obtenerDatos().subscribe((respuesta: any) =>{
       console.log("Respuesta: ", respuesta);
+      if (respuesta) {        
+        this.todosLosDatos = respuesta;
+        console.log("Todo bien!");
+        } else {
+          console.log("ocurrió un error, no existe respuesta.items");
+        }
     })
   }
 

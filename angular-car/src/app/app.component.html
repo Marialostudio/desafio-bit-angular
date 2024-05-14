@@ -1,3 +1,18 @@
-<p>Hello!</p>
+<header>
+  <h1>Game of Thrones</h1>
+  <h2>Meet the characters!</h2>
+</header>
+<section class="container d-flex flex-wrap justify-content-center gap-5">
+  @for(elemento of todosLosDatos; track elemento; let i = $index){
+      <div class="card" style="width: 18rem;">
+          <img src="{{elemento.imageUrl}}" class="card-img-top" alt="foto de {{elemento.image}}">
+          <div class="card-body">
+              <h5 class="card-title">{{elemento.fullName}}</h5>
+              <p class="card-text">From {{elemento.family}}</p>
+          </div>
+      </div>
+  }
 
+</section>
+<footer class="container d-flex flex-wrap text-center my-5">&copy; 2024</footer>
 <!--<router-outlet />-->
