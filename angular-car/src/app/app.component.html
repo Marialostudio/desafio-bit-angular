@@ -1,11 +1,13 @@
-<header>
-  <h1>Game of Thrones</h1>
-  <h2>Meet the characters!</h2>
+<header class="container-fluid text-center">
+  <h1><img src="./assets/Logo_Game_of_Thrones.png" alt="Logo Game of Thrones"></h1>
 </header>
-<section class="container d-flex flex-wrap justify-content-center gap-5">
+<section class="container-fluid text-center gradient">
+  <h4>Meet all the characters!</h4>
+</section> 
+<section class="container-fluid d-flex flex-wrap justify-content-center gap-5">
   @for(elemento of todosLosDatos; track elemento; let i = $index){
       <div class="card" style="width: 18rem;">
-          <img src="{{elemento.imageUrl}}" class="card-img-top" alt="foto de {{elemento.image}}">
+          <img src="{{elemento.imageUrl}}" class="card-img-top myimg" alt="foto de {{elemento.image}}">
           <div class="card-body">
               <h5 class="card-title">{{elemento.fullName}}</h5>
               <p class="card-text">From {{elemento.family}}</p>
@@ -14,5 +16,18 @@
   }
 
 </section>
-<footer class="container d-flex flex-wrap text-center my-5">&copy; 2024</footer>
+
+<footer class="container-fluid text-center">
+  <div class="row justify-content-md-center">
+      <div class="col-6 col-md-4">
+          <a href="https://github.com/Marialostudio"><img class="social" src="/assets/github-logo.png" alt=""></a>
+      </div>
+      <div class="col-6 col-md-4">
+          <img class="cristalheart" src="/assets/heartcuarzocristal.png" alt="cuarzo cristal de corazón">
+      </div>
+      <div class="col-6 col-md-4">
+          <a href="https://www.instagram.com/marialostudio/"><img class="social" src="/assets/instagram-logo.png" alt=""></a>
+      </div>
+  </div>
+</footer>
 <!--<router-outlet />-->
